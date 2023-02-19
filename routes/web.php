@@ -5,8 +5,7 @@
  * @website https://danidoble.com
  */
 
-use App\Config\Router;
-use App\Controllers;
+use Danidoble\SkeletonConfig\Config\Router;
 
-Router::add('/', [Controllers\TestingController::class, 'index'], 'index', 'GET');
-Router::add('/test', [Controllers\TestingController::class, 'test'], 'test', ['GET','POST']);
+Router::add('/', [\Danidoble\SkeletonConfig\Controllers\TestingController::class, 'index'], 'index', 'GET');
+Router::add('/test', [\Danidoble\SkeletonConfig\Controllers\TestingController::class, 'test'], 'test', ['GET','POST']);

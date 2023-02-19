@@ -8,9 +8,13 @@
   "type": "project",
   "require": {
     "php": "^8.1",
+    "coincitymexico/db": "^0.0.1",
+    "danidoble/skeleton-config": "^0.0.1",
     "illuminate/database": "^10.0",
+    "illuminate/routing": "^10.0",
     "illuminate/view": "^10.0",
     "spatie/ignition": "^1.4",
+    "spatie/laravel-ignition": "^2.0",
     "symfony/http-foundation": "^6.2",
     "symfony/http-kernel": "^6.2",
     "symfony/routing": "^6.2",
@@ -21,9 +25,7 @@
   },
   "license": "MIT",
   "autoload": {
-    "files": [
-      "app/Config/Functions.php"
-    ],
+    "files": [],
     "psr-4": {
       "App\\": "app/"
     }
@@ -31,9 +33,6 @@
   "scripts": {
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
-    "post-create-project-cmd": [
-      "@php artisan key:generate --ansi"
     ]
   },
   "authors": [
